@@ -5,6 +5,7 @@ import Assessment from '../src/components/Assessment'
 import Dashboard from '../src/components/Dashboard'
 import Clients from '../src/components/Clients'
 import Management from '../src/components/Management'
+import AssessmentState from '../src/components/AssessmentState'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -36,7 +37,16 @@ export default class App extends React.Component {
         ]
         break
       case 'assessment':
-        dashboard_state = <Assessment />
+        dashboard_state = (
+          <AssessmentState
+            changeAssessmentState={(assessmentState) => {
+              this.setState({
+                dashboardState: 'assessment_state',
+                assessmentState,
+              })
+            }}
+          />
+        )
         navigation_options = [
           'Identify',
           'Protect',
@@ -46,6 +56,21 @@ export default class App extends React.Component {
         ]
 
         break
+      case 'assessment_state':
+        dashboard_state = (
+          <Assessment
+            assessmentState={this.state.assessmentState}
+            changeAssessmentState={this.changeAssessmentState}
+          />
+        )
+        navigation_options = [
+          'Maturity Assessment',
+          'Assessment Latest Report',
+          'Assessment History',
+        ]
+
+        break
+
       case 'clients':
         dashboard_state = <Clients />
         break
@@ -63,8 +88,12 @@ export default class App extends React.Component {
             dashboard_state={this.state.dashboardState}
             assessment_state={this.state.assessmentState}
             navigation_options={navigation_options}
+            changeAssessmentState={this.changeAssessmentState}
+            changeDashboardState={this.changeDashboardState}
           />
+          <div style={{marginTop: 64, marginLeft: 280}}>
           {dashboard_state}
+          </div>
         </div>
       </div>
     )

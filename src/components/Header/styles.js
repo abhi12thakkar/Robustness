@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 const HeaderStyles = styled.div`
   .header-container {
+    position: fixed;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 101;
     display: flex;
     justify-content: space-between;
     align-items: center;
