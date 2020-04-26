@@ -5,7 +5,6 @@ const NavigatorStyles = styled.div`
     width: 280px;
     height: 100vh;
     position: fixed;
-    margin-top: 64px;
     padding: 2px 24px 24px 24px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
       'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',

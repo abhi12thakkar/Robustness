@@ -83,7 +83,14 @@ export default class App extends React.Component {
     return (
       <div>
         <Header />
-        <div style={{ display: 'flex' }}>
+        <div
+          style={{
+            display: 'flex',
+            paddingTop: 64,
+            minHeight: 'calc(100vh - 64px)',
+            boxSizing: 'border-box',
+          }}
+        >
           <Navigator
             dashboard_state={this.state.dashboardState}
             assessment_state={this.state.assessmentState}
@@ -91,9 +98,8 @@ export default class App extends React.Component {
             changeAssessmentState={this.changeAssessmentState}
             changeDashboardState={this.changeDashboardState}
           />
-          <div style={{marginTop: 64, marginLeft: 280}}>
-          {dashboard_state}
-          </div>
+          <div style={{ width: 280 }}></div>
+          <div style={{ flex: 1 }}>{dashboard_state}</div>
         </div>
       </div>
     )

@@ -1,4 +1,5 @@
 import React from 'react'
+import Styles from './styles'
 
 export default class AssessmentState extends React.Component {
   constructor(props) {
@@ -7,48 +8,53 @@ export default class AssessmentState extends React.Component {
   }
   render() {
     return (
-      <div className="dashboard-container">
-        <div
-          className="vertical"
-          onClick={() => {
-            this.props.changeAssessmentState('identity')
-          }}
-        >
-          Identity
+      <Styles>
+        <div className="assessment-state-container">
+          <div className="title">CSRI Dashboard</div>
+          <div className="verticals-container">
+            <div
+              className="vertical identity"
+              onClick={() => {
+                this.props.changeAssessmentState('identity')
+              }}
+            >
+              <div className="vertical-title">Identity</div>
+            </div>
+            <div
+              className="vertical  protect"
+              onClick={() => {
+                this.props.changeAssessmentState('protect')
+              }}
+            >
+              <div className="vertical-title">Protect</div>
+            </div>
+            <div
+              className="vertical  detect"
+              onClick={() => {
+                this.props.changeAssessmentState('detect')
+              }}
+            >
+              <div className="vertical-title">Detect</div>
+            </div>
+            <div
+              className="vertical  respond"
+              onClick={() => {
+                this.props.changeAssessmentState('respond')
+              }}
+            >
+              <div className="vertical-title">Respond</div>
+            </div>
+            <div
+              className="vertical  recovery"
+              onClick={() => {
+                this.props.changeAssessmentState('recovery')
+              }}
+            >
+              <div className="vertical-title">Recovery</div>
+            </div>
+          </div>
         </div>
-        <div
-          className="vertical"
-          onClick={() => {
-            this.props.changeAssessmentState('protect')
-          }}
-        >
-          Protect
-        </div>
-        <div
-          className="vertical"
-          onClick={() => {
-            this.props.changeAssessmentState('detect')
-          }}
-        >
-            Detect
-        </div>
-        <div
-          className="vertical"
-          onClick={() => {
-            this.props.changeAssessmentState('respond')
-          }}
-        >
-            Respond
-        </div>
-        <div
-          className="vertical"
-          onClick={() => {
-            this.props.changeAssessmentState('recovery')
-          }}
-        >
-            Recovery
-        </div>
-      </div>
+      </Styles>
     )
   }
 }
