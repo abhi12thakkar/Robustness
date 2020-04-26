@@ -11,7 +11,10 @@ export default class Navigator extends React.Component {
 
   handleStateChange = (ele) => {
     if (this.props.dashboard_state == 'assessment') {
-      this.props.chanageAssessmentState(ele.toLowerCase())
+      this.props.changeDashboardState('assessment_state')
+      this.props.changeAssessmentState(ele.state)
+    } else {
+      this.props.changeDashboardState(ele.state)
     }
   }
   render() {
@@ -55,7 +58,7 @@ export default class Navigator extends React.Component {
                       this.setState({ selected: index })
                     }}
                   >
-                    {ele}
+                    {ele.text}
                   </div>
                 )
               })}

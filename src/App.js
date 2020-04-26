@@ -41,9 +41,9 @@ export default class App extends React.Component {
           <Dashboard changeDashboardState={this.changeDashboardState} />
         )
         navigation_options = [
-          'Maturity Assessment',
-          'Assessment Latest Report',
-          'Assessment History',
+          {text: 'Maturity Assessment', state: 'assessment'},
+          {text: 'Assessment Latest Report'},
+          {text: 'Assessment History'},
         ]
         break
       case 'assessment':
@@ -58,11 +58,11 @@ export default class App extends React.Component {
           />
         )
         navigation_options = [
-          'Identify',
-          'Protect',
-          'Detect',
-          'Response',
-          'Recovery',
+          {text: 'Identify', state: 'identify'},
+          {text: 'Protect', state: 'protect'},
+          {text: 'Detect', state: 'detect'},
+          {text: 'Response', state: 'response'},
+          {text: 'Recovery', state: 'recovery'},
         ]
 
         break
@@ -78,9 +78,9 @@ export default class App extends React.Component {
           />
         )
         navigation_options = [
-          'Maturity Assessment',
-          'Assessment Latest Report',
-          'Assessment History',
+            {text: 'Maturity Assessment', state: 'assessment'},
+            {text: 'Assessment Latest Report'},
+            {text: 'Assessment History'},
         ]
 
         break
