@@ -21,10 +21,20 @@ export default class App extends React.Component {
   changeAssessmentState = (assessmentState) => {
     this.setState({ assessmentState })
   }
+  handleNextBackClick = (isNext) => {
+    let assessment_order = ["identify", "protect", "detect", "response", "recovery"]
+    let i;
+    for(i=0;i<assessment_order.length;i++){
+        if(this.state.assessmentState==assessment_order[i])
+            break;
+    }
+    this.changeAssessmentState(assessment_order[isNext?i+1:i-1])
+  }
   render() {
     let dashboard_state = null
     let assessment_state = null
     let navigation_options = null
+    
     switch (this.state.dashboardState) {
       case 'csri':
         dashboard_state = (
@@ -61,6 +71,10 @@ export default class App extends React.Component {
           <Assessment
             assessmentState={this.state.assessmentState}
             changeAssessmentState={this.changeAssessmentState}
+            showNext={this.state.assessmentState!="recovery"}
+            showBack={this.state.assessmentState!="identify"}
+            onNext={()=>{this.handleNextBackClick(true)}}
+            onBack={()=>{this.handleNextBackClick(false)}}
           />
         )
         navigation_options = [

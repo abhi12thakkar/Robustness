@@ -1,0 +1,64 @@
+{
+    "identify": {
+        "asset_management": {
+            "title": "Asset Management",
+            "questions": [{
+                "text": "The ability to identify all organisational assets and maintain visibility to them",
+                "description": "Manage a central inventory of all IT assets. Conduct frequent audits to ensure the inventory is up to date. Incorporate network monitoring tools to determine the status of all devices"
+            },{
+                "text": "Review/Test and document all new software and major updates ",
+                "description": "Test all new software and major updates before installing on production system. Maintain a detailed history of all installed software and updates and review this frequently"
+            },{
+                "text": "An extensive understanding and detailed documentation of all devices connected to the corporate network.",
+                "description": "This should include the geographical location of each device."
+            },{
+                "text": "Maintain an inventory of all sensitive information stored, processed, or transmitted by the organization's technology systems, including those located on-site or at a remote service provider.",
+                "description": "Inventory of all data storages, their locations and the type of data kept in each location."
+            }]
+        },
+        "business_environment": {
+            "title": "Business Environment",
+            "questions": [{
+                "text": "Supply chain dependencies are identified and documented.",
+                "description": "Document manufacture and support information for all devices and software used within the organisation."
+            },{
+                "text": "Services of the organisation are identified, including critical services and acceptable downtimes.",
+                "description": null
+            },{
+                "text": "Priority services for the organisation are identified and communicated. Dependencies of services provided by the organisation on other services have also been assessed.",
+                "description": "Services that are critical for the organisation's operations and services have been identified and documented."
+            },{
+                "text": "Intrinsic dependencies pertaining to the organisation's mission, values, brand image, ethical and moral values are documented and understood.",
+                "description": "The identification of dependencies that are intrinsic to the organisation's reputation and values."
+            }]
+        }
+    },
+    "protect": {
+        "identity_management": {
+            "title": "Identity Management and Access Control",
+            "questions": [{
+                "text": "The organization has a proper authentication mechanism for its users and devices, with accounts revoked and managed according to the organisation's policy. Access permission is set according to the principles of least privilege.",
+                "description": "A quarterly audit of all user accounts is conducted."
+            },{
+                "text": "Remote access to data and assets of the company are managed. Quarterly audit of all access permissions.",
+                "description": null
+            },{
+                "text": "Password policies are in place to enforce strong passwords and account lockout is enabled for multiple failed attempts.",
+                "description": "Passwords are greater than 8 characters and are composed of a combination of numbers, symbols, capital and lower-case letters. Account lockout occurs after 5 unsuccessful attempts."
+            },{
+                "text": "Elevated access or administration access permissions are limited only to selected authorized users. Quarterly audits of all elevated access permissions.",
+                "description": null
+            }]
+        },
+        "awareness": {
+            "title": "Awareness and Training",
+            "questions": [{
+                "text": "Regular training is provided to users on spam emails and identity theft, including senior executives.",
+                "description": "Biannual spam training campaigns are conducted and/or annual formal cyber security training."
+            },{
+                "text": "System/network administrators are trained in cyber security. Administrators, users and third-party stakeholders are aware of their roles and responsibilities.",
+                "description": "Annual cyber security training for system administrive staff is performed, with proof of completion provided."
+            }]
+        }
+    }
+}

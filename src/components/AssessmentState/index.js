@@ -15,7 +15,7 @@ export default class AssessmentState extends React.Component {
             <div
               className="vertical identity"
               onClick={() => {
-                this.props.changeAssessmentState('identity')
+                this.props.changeAssessmentState('identify')
               }}
             >
               <div className="vertical-title">Identity</div>
@@ -39,10 +39,10 @@ export default class AssessmentState extends React.Component {
             <div
               className="vertical  respond"
               onClick={() => {
-                this.props.changeAssessmentState('respond')
+                this.props.changeAssessmentState('response')
               }}
             >
-              <div className="vertical-title">Respond</div>
+              <div className="vertical-title">Response</div>
             </div>
             <div
               className="vertical  recovery"
